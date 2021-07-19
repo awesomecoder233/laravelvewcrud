@@ -1,0 +1,23 @@
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+@import '~sweetalert2/src/sweetalert2';
+
+@import 'elements/card';
+@import 'elements/navbar';
+@import 'elements/buttons';
+@import 'elements/transitions';
+
+@import 'components/server-error';
+
+.item {
+    margin-bottom: 20px;
+}
+.email {
+    margin-bottom: 20px;
+}
+.datefrom {
+    margin-bottom: 20px;
+}
+.dateto {
+    margin-bottom: 20px;
+}
