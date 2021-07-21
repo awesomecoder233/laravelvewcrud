@@ -8,7 +8,6 @@ use DB;
 
 class CompanyController extends Controller
 {
-    //
     public function currentCompany(Request $request)
     {
         return response()->json(Companies::get());
