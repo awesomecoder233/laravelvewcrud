@@ -25,8 +25,6 @@ export default {
     }),
   }),
   created() {
-    //this.item = this.$route.params.item;
-    // console.log(this.$route.params.id);
     axios.get('/api/item/' + this.$route.params.id).then(function (res) {
         this.form.item = res.data.item
         this.form.email = res.data.email
