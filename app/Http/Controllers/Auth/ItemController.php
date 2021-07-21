@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
-use App\Models\Item;
+use App\Models\Job;
 use Illuminate\Http\Request;
 use DB;
 
@@ -11,12 +11,12 @@ class ItemController extends Controller
     //
     public function itemsList(Request $request)
     {
-        return response()->json(Item::get());
+        return response()->json(Job::get());
     }
 
     public function itemById($id)
     {
-        return response()->json(DB::table('items')->find($id));
+        return response()->json(DB::table('jobs')->find($id));
     }
 
     public function itemsAdd(Request $request)

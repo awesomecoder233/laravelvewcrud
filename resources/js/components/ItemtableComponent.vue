@@ -1,17 +1,17 @@
 <template>
-  <div>
+  <div class="col-md-12">
     <vue-good-table
     :columns="columns"
     :rows="rows" >
-    <template slot="table-row" slot-scope="props">
+    <!--<template slot="table-row" slot-scope="props">
       <span v-if="props.column.field == 'action'">
         <button @click="editRow(props.row.id)">Update</button>
         <button @click="deleteRow(props.row.id)">Delete</button>
       </span>
-    </template>
+    </template>-->
     
   </vue-good-table>
-    <button v-on:click="addItem" class="btn-default">Add</button>
+    <!--<button v-on:click="addItem" class="btn-default">Add</button>-->
   </div>
 </template>
 
@@ -25,28 +25,24 @@ export default {
     return {
       columns: [
         {
-          label: 'id',
-          field: 'id'
+          label: 'Job title',
+          field: 'title'
         },
         {
-          label: 'item',
-          field: 'item'
+          label: 'Company',
+          field: 'company_id'
         },
         {
-          label: 'email',
-          field: 'email'
+          label: 'description',
+          field: 'description'
         },
         {
-          label: 'date_from',
-          field: 'process_from'
+          label: 'location',
+          field: 'location'
         },
         {
-          label: 'date_to',
-          field: 'process_to'
-        },
-        {
-          label: 'Action',
-          field: 'action'
+          label: 'published date',
+          field: 'created_at'
         },
       ],
       rows: [],

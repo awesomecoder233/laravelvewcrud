@@ -1,25 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-      <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
-        {{ appName }}
-      </router-link>
-
-      <router-link :to="{ name: user ? 'users' : 'welcome' }" class="navbar-brand">
-        {{ $t('users') }}
-      </router-link>
-
-      <router-link :to="{ name: user ? 'items' : 'welcome' }" class="navbar-brand">
-        {{ $t('items') }}
-      </router-link>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false">
-        <span class="navbar-toggler-icon" />
-      </button>
-
       <div id="navbarToggler" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-          <locale-dropdown />
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li> -->
@@ -48,15 +31,10 @@
             </div>
           </li>
           <!-- Guest -->
-          <template v-else>
+          <template>
             <li class="nav-item">
               <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
-                {{ $t('login') }}
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
-                {{ $t('register') }}
+                {{ $t('Add new job ad') }}
               </router-link>
             </li>
           </template>
